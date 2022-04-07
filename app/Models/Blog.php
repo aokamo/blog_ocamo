@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     use HasFactory;
+
+    // テーブル名
+    protected $table = 'blogs';
+
+    // 可変項目
+    protected $fillable =
+    [
+        'title',
+        'body'
+    ];
 }
