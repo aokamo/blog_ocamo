@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// 指定したいコントローラをuseでインポート/
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 // ブログ一覧
-Route::get('/', 'BlogController@showIndex')->name('index');
+Route::get('/', [BlogController::class, 'showIndex'])->name('index');
